@@ -1,0 +1,27 @@
+.boton-estetico {
+    /* Estilos generales del botón */
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #ffffff;
+    background-color: #4CAF50; /* Color de fondo del botón */
+    border: none;
+    border-radius: 5px; /* Borde redondeado del botón */
+    box-shadow: 0 9px #999; /* Sombra del botón */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.boton-estetico:hover {
+    /* Estilos del botón al pasar el cursor sobre él */
+    background-color: #3e8e41; /* Cambio de color de fondo al pasar el cursor sobre el botón */
+}
+
+.boton-estetico:active {
+    /* Estilos del botón al hacer clic en él */
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
