@@ -6,21 +6,25 @@
     box-sizing: border-box;
 }
 
-body {
+#titulo{
+display: flex;
+margin-top: 5%;
+justify-content: center;
+
+
+}
+
+body {   
+    background: linear-gradient(darkred, red, orange);
+}
+
+.buttom{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: linear-gradient(darkred, red, orange);
+    height: 79vh;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-}
-
-img{
-    position: absolute;
-    display: flex;
-    height: 98vh;
-    
 }
 
 a {
