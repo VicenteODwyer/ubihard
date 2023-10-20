@@ -1,35 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
 body{
     background-image: url(70bf057fc74ec01a2190ec5e4d77064b.png);
 }
-#titulo{
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.niveles{
+    padding: 50px 0 150px 0;
+    animation:niveles .9s linear both
+}
+
+
+
+.swiper{
+    width: 100%;
+}
+.swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+}
+.swiper-slide a img{
+    display: block;
+    width: 100%;
+}
+
+.titulo{
     display: flex;
-    margin-top: 5%;
+    margin-top: 1%;
     justify-content: center;
-    font-family: 'Oswald', sans-serif;
-    animation:titulo infinite linear both
+    font-size: 30px;
+    animation:titulo 0.4s linear both
 }  
     
-.container{
-    display: flex;
-    justify-content: space-around;
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-    padding: 150px 10px;
-    margin-left: 10px;
-}
 
-.box {
-    width: 200px;
-    height: 200px;
-    animation:box .9s linear both
-}
-img:hover{
- width: 220px;
- height: 220px;
-}
 
-@keyframes box{0%{transform:scale3d(1,1,1)}
+@keyframes niveles{0%{transform:scale3d(1,1,1)}
 30%{transform:scale3d(.75,1.25,1)}
 40%{transform:scale3d(1.25,.75,1)}
 50%{transform:scale3d(.85,1.15,1)}
@@ -38,6 +51,7 @@ img:hover{
 100%{transform:scale3d(1,1,1)}
 }
 @keyframes titulo{
-    0%{box-shadow:0 0 0 0 transparent}
-    100%{box-shadow:0 0 20px 0 red)}
+    0%{letter-spacing:.6em;opacity:0}
+    40%{opacity:.6}
+    100%{letter-spacing:normal;opacity:1}
 }
