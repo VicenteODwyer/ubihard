@@ -1,16 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 body{
     background-image: url(70bf057fc74ec01a2190ec5e4d77064b.png);
 }
+#titulo{
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    animation:titulo infinite linear both
+}  
+    
 .container{
     display: flex;
     justify-content: space-around;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: bold;
-    padding: 200px 10px;
+    padding: 150px 10px;
     margin-left: 10px;
 }
 
 .box {
     width: 200px;
     height: 200px;
+    animation:box .9s linear both
+}
+img:hover{
+ width: 220px;
+ height: 220px;
+}
+
+@keyframes box{0%{transform:scale3d(1,1,1)}
+30%{transform:scale3d(.75,1.25,1)}
+40%{transform:scale3d(1.25,.75,1)}
+50%{transform:scale3d(.85,1.15,1)}
+65%{transform:scale3d(1.05,.95,1)}
+75%{transform:scale3d(.95,1.05,1)}
+100%{transform:scale3d(1,1,1)}
+}
+@keyframes titulo{
+    0%{box-shadow:0 0 0 0 transparent}
+    100%{box-shadow:0 0 20px 0 red)}
 }
