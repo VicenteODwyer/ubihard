@@ -1,17 +1,16 @@
-body {
-    background: radial-gradient(orange, red);
-    
+body{
+    background-image: url(70bf057fc74ec01a2190ec5e4d77064b.png);
 }
-div, a{
+.container{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 79vh;
+    justify-content: space-around;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+    padding: 200px 10px;
+    margin-left: 10px;
 }
 
-img {
+.box {
     width: 100px;
     height: 100px;
 }
