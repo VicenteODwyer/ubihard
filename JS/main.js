@@ -13,7 +13,9 @@ let rederer = Matter.Render.create({
 let ground = Matter.Bodies.rectangle(600, 480, 250, 20, {
     isStatic: true,
     render:{
-fillStyle: 'brown'
+        sprite:{
+            texture: './Imagenes/Sprites/wood2.png'
+        }
     }
 })
 
@@ -23,7 +25,7 @@ let composite = Matter.Composites.pyramid(489, 200, 7, 6, 0, 0, function(x, y){
     return Matter.Bodies.rectangle(x, y, 30, 25,{
         render: {
             sprite:{
-                texture: './Imagenes/chancho.png'
+                texture: './Imagenes/Sprites/chancho.png'
             }
             
         }
@@ -38,7 +40,7 @@ let ball_pos = {
 let ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 20, {
     render: {
         sprite:{
-            texture: './Imagenes/Pajarogordo.png'
+            texture: './Imagenes/Sprites/Pajarogordo.png'
         }
         
     }
@@ -75,7 +77,7 @@ Matter.Events.on(engine, 'afterUpdate', function(event){
         ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 20,{
             render: {
                 sprite:{
-                    texture: './Imagenes/Pajarogordo.png'
+                    texture: './Imagenes/Sprites/Pajarogordo.png'
                 }
                 
             }
