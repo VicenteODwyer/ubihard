@@ -1,0 +1,50 @@
+.grid{
+    z-index: -1;
+    position: center;
+    background-image: url(sprites/bg.png);
+    width: 1200px;
+    height: 600px;
+    border: solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid div{
+    z-index: 0;
+    width: 15px;
+    height: 15px;
+}
+.wood1{
+    z-index: 0;
+    background-image: url(sprites/wood1.png);
+}
+.wood2{
+    z-index: 0;
+    background-image: url(sprites/wood2.png);
+}
+.pig{
+    z-index: 1;
+    background-image: url(sprites/enemy.png);
+    border-radius:7.5px;
+}
+.red{
+    z-index: 1;
+    background-image: url(sprites/bird.png);
+    border-radius:7.5px;
+}
+.ground{
+    z-index: 0;
+    background-image: url(sprites/ground.png);
+}
+.sling1{
+    z-index: 1;
+    background-image: url(sprites/sling1.png);
+}
+.sling2{
+    z-index: 2;
+    background-image: url(sprites/sling3.png);
+}
+.sling3{
+    z-index: 3;
+    background-image: url(sprites/sling2.png);
+}
+

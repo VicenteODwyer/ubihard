@@ -6,43 +6,59 @@ let rederer = Matter.Render.create({
     options: {
         height: 600,
         width: 800,
-        wireframes:false
+        wireframes:false,
+        background: './imagenes/Sprites/bg.png'
     }
 });
 
-let ground = Matter.Bodies.rectangle(600, 480, 250, 20, {
+let ground = Matter.Bodies.rectangle(400, 600, 800, 195, {
     isStatic: true,
-    render:{
+    fillStyle: 'brawn'
+})
+let ground2 = Matter.Bodies.rectangle(100, 500, 200, 50, {
+    isStatic: true,
+    fillStyle: 'brawn'
+})
+let woodplanc = Matter.Bodies.rectangle(400, 400, 202, 19, {
+    render: {
         sprite:{
-            texture: './Imagenes/Sprites/wood2.png'
+            texture: './imagenes/Sprites/wood2.png'
         }
     }
 })
-
+let woodcube = Matter.Bodies.rectangle(400, 350, 81, 81,{
+    render:{
+        sprite:{
+            texture: './imagenes/Sprites/wood1.png'
+        }
+    }
+})
 let box = Matter. Bodies.rectangle(500, 200, 50, 50)
 
-let composite = Matter.Composites.pyramid(489, 200, 7, 6, 0, 0, function(x, y){
-    return Matter.Bodies.rectangle(x, y, 30, 25,{
-        render: {
-            sprite:{
-                texture: './Imagenes/Sprites/chancho.png'
-            }
-            
-        }
-    })
-})
 
+let chochan = Matter.Bodies.circle(500, 490, 25,{
+    render: {
+        sprite:{
+            texture: './Imagenes/Sprites/chancho.png'
+        }
+        
+    }
+})
 let ball_pos = {
     x: 100,
     y: 400
 }
 
-let ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 20, {
+let ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 50, {
     render: {
         sprite:{
             texture: './Imagenes/Sprites/Pajarogordo.png'
         }
         
+    },
+    physics:{
+        density: 0.9,
+        frictionAir: 0.05,
     }
 })
 let sling = Matter.Constraint.create({
@@ -60,7 +76,7 @@ let mouseConstraint = Matter.MouseConstraint.create(engine,{
 
 rederer.mouse = mouseConstraint 
 
-Matter.World.add(engine.world, [ground, composite, ball, sling, mouseConstraint])
+Matter.World.add(engine.world, [woodcube, woodplanc, ground2, ground, chochan, ball, sling, mouseConstraint])
     
 let isFired = false
 
