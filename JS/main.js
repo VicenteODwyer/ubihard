@@ -19,14 +19,21 @@ let ground2 = Matter.Bodies.rectangle(100, 500, 200, 50, {
     isStatic: true,
     fillStyle: 'brawn'
 })
-let woodplanc = Matter.Bodies.rectangle(400, 400, 202, 19, {
+let woodplanc = Matter.Bodies.rectangle(500, 400, 202, 19, {
     render: {
         sprite:{
             texture: './imagenes/Sprites/wood2.png'
         }
     }
 })
-let woodcube = Matter.Bodies.rectangle(400, 350, 81, 81,{
+let woodcube = Matter.Bodies.rectangle(600, 550, 81, 81,{
+    render:{
+        sprite:{
+            texture: './imagenes/Sprites/wood1.png'
+        }
+    }
+})
+let woodcube2 = Matter.Bodies.rectangle(400, 550, 81, 81,{
     render:{
         sprite:{
             texture: './imagenes/Sprites/wood1.png'
@@ -37,6 +44,14 @@ let box = Matter. Bodies.rectangle(500, 200, 50, 50)
 
 
 let chochan = Matter.Bodies.circle(500, 490, 25,{
+    render: {
+        sprite:{
+            texture: './Imagenes/Sprites/chancho.png'
+        }
+        
+    }
+})
+let chochan2 = Matter.Bodies.circle(500, 390, 25,{
     render: {
         sprite:{
             texture: './Imagenes/Sprites/chancho.png'
@@ -56,10 +71,6 @@ let ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 50, {
         }
         
     },
-    physics:{
-        density: 0.9,
-        frictionAir: 0.05,
-    }
 })
 let sling = Matter.Constraint.create({
     pointA: {
@@ -76,7 +87,7 @@ let mouseConstraint = Matter.MouseConstraint.create(engine,{
 
 rederer.mouse = mouseConstraint 
 
-Matter.World.add(engine.world, [woodcube, woodplanc, ground2, ground, chochan, ball, sling, mouseConstraint])
+Matter.World.add(engine.world, [woodcube2 ,woodcube, woodplanc, ground2, ground, chochan, chochan2,ball, sling, mouseConstraint])
     
 let isFired = false
 
