@@ -25,7 +25,6 @@ let createMatrix = (panel, amount) => {
 let generateString = (length) => {
     let string = '';
     const chars = "是不人他	这为之来我的"
-    //const chars = "是不人他	这为之来我的"
 
     for(let i = 0; i < length; i++){
         string += chars.charAt(Math.random() * (chars.length - 0) + 0)
