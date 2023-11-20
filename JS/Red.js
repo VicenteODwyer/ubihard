@@ -1,24 +1,26 @@
-let engine = Matter.Engine.create()
+let engine = Matter.Engine.create()//crea el motor para las fisicas y funciones del JS
 
-let rederer = Matter.Render.create({
+let rederer = Matter.Render.create({//crea el escenario
     element: document.body,
-    engine: engine,
+    engine: engine,//establece el motor a usar
     options: {
         height: 695 ,
         width: 1480,
         wireframes:false,
-        background: './imagenes/Sprites/bg.png'
+        background: './imagenes/Sprites/bg.png'//fondo
     },
-});
-collCube=0
+})
+//Crea la base para el juego
 let ground = Matter.Bodies.rectangle(740, 600, 1480 , 195, {
     isStatic: true,
     fillStyle: 'brawn'
 })
+//base de la resortera
 let ground2 = Matter.Bodies.rectangle(100, 500, 200, 50, {
     isStatic: true,
     fillStyle: 'brawn'
 })
+//plancha de madera
 let woodplanc = Matter.Bodies.rectangle(1200, 400, 202, 19, {
     render: {
         sprite:{
@@ -26,6 +28,7 @@ let woodplanc = Matter.Bodies.rectangle(1200, 400, 202, 19, {
         }
     }
 })
+//cubo de madera 1
 let woodcube = Matter.Bodies.rectangle(1100, 550, 81, 81,{
     render:{
         sprite:{
@@ -33,6 +36,7 @@ let woodcube = Matter.Bodies.rectangle(1100, 550, 81, 81,{
         }
     }
 })
+//cubo de madera 2
 let woodcube2 = Matter.Bodies.rectangle(1300, 550, 81, 81,{
     render:{
         sprite:{
@@ -40,9 +44,8 @@ let woodcube2 = Matter.Bodies.rectangle(1300, 550, 81, 81,{
         }
     }
 })
-let box = Matter. Bodies.rectangle(500, 200, 50, 50)
 
-
+//chancho 1
 let chochan = Matter.Bodies.circle(1200, 490, 25,{
     render: {
         sprite:{
@@ -51,6 +54,7 @@ let chochan = Matter.Bodies.circle(1200, 490, 25,{
         
     }
 })
+//chancho 2
 let chochan2 = Matter.Bodies.circle(1200, 390, 25,{
     render: {
         sprite:{
@@ -59,6 +63,7 @@ let chochan2 = Matter.Bodies.circle(1200, 390, 25,{
         
     }
 })
+//posicion del pajaro
 let ball_pos = {
     x: 150,
     y: 400
@@ -80,7 +85,7 @@ ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 20,{
     inertia: Infinity
 })
 
-
+//posicion de la resortera
 let sling = Matter.Constraint.create({
     pointA: {
         x: ball_pos.x,
@@ -90,25 +95,27 @@ let sling = Matter.Constraint.create({
     stiffness: 0.05
 })
 
+//funcion para poder usar el mouse
 let mouseConstraint = Matter.MouseConstraint.create(engine,{
     mouse: Matter.Mouse.create(rederer.canvas)
 })
 
 rederer.mouse = mouseConstraint 
 
+//se agregan los objetos al mundo
 Matter.World.add(engine.world, [woodcube2 ,woodcube, woodplanc, ground2, ground, chochan, chochan2,ball, sling, mouseConstraint])
     
 let isFired = false
 
-Matter.Events.on(mouseConstraint, 'enddrag', function(event){
+Matter.Events.on(mouseConstraint, 'enddrag', function(event){//detecta la accion del mouse sobre un objeto
     if(event.body === ball){
-        isFired = true
+        isFired = true//indica si se lanzo de la resortera
     }
 })
 
 Matter.Events.on(engine, 'afterUpdate', function(event){
-    let dist_x = Math.abs(ball.position.x - ball_pos.x)
-    let dist_y = Math.abs(ball.position.y - ball_pos.y)
+    let dist_x = Math.abs(ball.position.x - ball_pos.x)//actualiza la posicion X del objeto
+    let dist_y = Math.abs(ball.position.y - ball_pos.y)//actualiza la posicion Y del objeto
     if(isFired && dist_x < 20 && dist_y < 20){
     //creando pajaro rojo
     ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 20,{
@@ -124,13 +131,13 @@ Matter.Events.on(engine, 'afterUpdate', function(event){
         frictionAir: 0.01, // fricción del aire del círculo
         restitution: 0.8, // restitución del círculo (rebote)
         inertia: Infinity
-    })
-        sling.bodyB = ball
-        Matter.World.add(engine.world, ball)
-        isFired = false
-
+    }) 
+    //vuelve a generar un nuevo pajaro en la gomera
+    sling.bodyB = ball
+    Matter.World.add(engine.world, ball)
+    isFired = false
     }
 })
 
-Matter.Render.run(rederer)
-Matter.Runner.run(engine)
+Matter.Render.run(rederer)//inicio todos los objetos render
+Matter.Runner.run(engine)//inicia el motor de fisicas 

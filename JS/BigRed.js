@@ -20,16 +20,8 @@ let ground2 = Matter.Bodies.rectangle(100, 500, 200, 50, {
     isStatic: true,
     fillStyle: 'brawn'
 })
-//plancha de madera
-let woodplanc = Matter.Bodies.rectangle(1190, 300, 202, 19, {
-    render: {
-        sprite:{
-            texture: './imagenes/Sprites/wood2.png'
-        }
-    }
-})
 //cubo de madera 1
-let woodcube = Matter.Bodies.rectangle(1140, 550, 81, 81,{
+let woodcube = Matter.Bodies.rectangle(1100, 550, 81, 81,{
     render:{
         sprite:{
             texture: './imagenes/Sprites/wood1.png'
@@ -37,7 +29,7 @@ let woodcube = Matter.Bodies.rectangle(1140, 550, 81, 81,{
     }
 })
 //cubo de madera 2
-let woodcube2 = Matter.Bodies.rectangle(1230, 550, 81, 81,{
+let woodcube2 = Matter.Bodies.rectangle(1120, 550, 81, 81,{
     render:{
         sprite:{
             texture: './imagenes/Sprites/wood1.png'
@@ -45,7 +37,15 @@ let woodcube2 = Matter.Bodies.rectangle(1230, 550, 81, 81,{
     }
 })
 //cubo de madera 3
-let woodcube3 = Matter.Bodies.rectangle(1190, 400, 81, 81,{
+let woodcube3 = Matter.Bodies.rectangle(1100, 350, 81, 81,{
+    render:{
+        sprite:{
+            texture: './imagenes/Sprites/wood1.png'
+        }
+    }
+})
+//cubo de madera 4
+let woodcube4 = Matter.Bodies.rectangle(1120, 350, 81, 81,{
     render:{
         sprite:{
             texture: './imagenes/Sprites/wood1.png'
@@ -61,17 +61,26 @@ let chochan = Matter.Bodies.circle(1200, 490, 25,{
         
     }
 })
+//chancho 2
+let chochan2 = Matter.Bodies.circle(1300, 490, 25,{
+    render: {
+        sprite:{
+            texture: './Imagenes/Sprites/chancho.png'
+        }
+        
+    }
+})
 //posicion del pajaro
 let ball_pos = {
     x: 150,
     y: 400
 }
 
-//creando pajaro azul
+//creando pajaro Gordo
 ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 20,{
     render: {
         sprite:{//imagen
-            texture: './Imagenes/Sprites/PajaroAzul.png'
+            texture: './Imagenes/Sprites/PajaroGordo.png'
         }    
     },//fiscas
     density: 0.001, // densidad del círculo
@@ -99,7 +108,7 @@ let mouseConstraint = Matter.MouseConstraint.create(engine,{
 rederer.mouse = mouseConstraint 
 
 //se agregan los objetos al mundo
-Matter.World.add(engine.world, [woodcube3,woodcube2 ,woodcube, woodplanc, ground2, ground, chochan,ball, sling, mouseConstraint])
+Matter.World.add(engine.world, [woodcube4, woodcube3,woodcube2 ,woodcube,ground2, ground,chochan2, chochan,ball, sling, mouseConstraint])
     
 let isFired = false
 
@@ -113,11 +122,11 @@ Matter.Events.on(engine, 'afterUpdate', function(event){
     let dist_x = Math.abs(ball.position.x - ball_pos.x)//actualiza la posicion X del objeto
     let dist_y = Math.abs(ball.position.y - ball_pos.y)//actualiza la posicion Y del objeto
     if(isFired && dist_x < 20 && dist_y < 20){
-        //creando pajaro azul
+        //creando pajaro Gordo
         ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 20,{
             render: {
                 sprite:{//imagen
-                    texture: './Imagenes/Sprites/PajaroAzul.png'
+                    texture: './Imagenes/Sprites/PajaroGordo.png'
                 }    
             },//fiscas
             density: 0.001, // densidad del círculo
