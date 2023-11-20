@@ -1,21 +1,27 @@
+
+/* Reset all margins and paddings */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* Set the background color of the body to black */
 body{
     background: black;
 }
+
+/* Create a container to center the circles */
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     height: 100vh; 
-    gap: 10px;/* Asegura que el contenedor ocupe toda la altura de la ventana */
+    gap: 10px; /* Asegura que el contenedor ocupe toda la altura de la ventana */
 }
 
-#c1 {
+/* Define the style for each circle */
+#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8, #c9, #c10, #c11 {
     font-size: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
@@ -27,14 +33,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    animation-name: separacion;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-delay: 2s;
-    animation: separacion 5s ease-in-out ;
 }
 
+/* Define the animation for each circle */
 @keyframes separacion {
     0% {
         transform: translateY(-500px);
@@ -44,378 +49,23 @@ body{
     }
     50% {
       transform: scale(1.5);
-    
+   
     }
     100% {
         transform: translateY(-100px);
         transform: scale(0);
     }
-  }
-
-
-
-  #c2 {
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(#33ccff, #ff0066);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-name: separacion;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-    animation: separacion2 5s ease-in-out ;
 }
 
-@keyframes separacion2 {
-    0% {
-        transform: translateY(-500px);
-    }
-    20%{
-        transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    
-    }
-    100% {
-        transform: translateY(-100px);
-        transform: scale(0);
-    }
-  }
-
-
-  #c3 {
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(#33ccff, #ff0066);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-    animation: separacion3 5s ease-in-out ;
-}
-
-@keyframes separacion3 {
-    0% {
-        transform: translateY(-500px);
-    }
-    20%{
-        transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    
-    }
-    100% {
-        transform: translateY(-100px);
-        transform: scale(0);
-    }
-  }
-
-
-  #c4 {
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(#33ccff, #ff0066);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-    animation: separacion4 5s ease-in-out ;
-}
-
-@keyframes separacion4 {
-    0% {
-        transform: translateY(-500px);
-    }
-    20%{
-        transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    
-    }
-    100% {
-        transform: translateY(-100px);
-        transform: scale(0);
-    }
-  }
-
-
-  #c5 {
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(#33ccff, #ff0066);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-    animation: separacion5 5s ease-in-out ;
-}
-
-@keyframes separacion5 {
-    0% {
-        transform: translateY(-500px);
-    }
-    20%{
-        transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    
-    }
-    100% {
-        transform: translateY(-100px);
-        transform: scale(0);
-    }
-  }
-
-
-  #c6 {
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(#33ccff, #ff0066);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-    animation: separacion6 5s ease-in-out ;
-}
-
-@keyframes separacion6 {
-    0% {
-        transform: translateY(-500px);
-    }
-    20%{
-        transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    
-    }
-    100% {
-        transform: translateY(-100px);
-        transform: scale(0);
-    }
-  }
-
-  #c7 {
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(#33ccff, #ff0066);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-    animation: separacion7 5s ease-in-out ;
-}
-
-@keyframes separacion7 {
-    0% {
-        transform: translateY(-500px);
-    }
-    20%{
-        transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    
-    }
-    100% {
-        transform: translateY(-100px);
-        transform: scale(0);
-    }
-  }
-
-
-  #c8 {
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(#33ccff, #ff0066);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-    animation: separacion8 5s ease-in-out ;
-}
-
-@keyframes separacion8 {
-    0% {
-        transform: translateY(-500px);
-    }
-    20%{
-        transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    
-    }
-    100% {
-        transform: translateY(-100px);
-        transform: scale(0);
-    }
-  }
-
-  #c9 {
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(#33ccff, #ff0066);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-    animation: separacion9 5s ease-in-out ;
-}
-
-@keyframes separacion9 {
-    0% {
-        transform: translateY(-500px);
-    }
-    20%{
-        transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    
-    }
-    100% {
-        transform: translateY(-100px);
-        transform: scale(0);
-    }
-  }
-
-  #c10 {
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(#33ccff, #ff0066);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-    animation: separacion10 5s ease-in-out ;
-}
-
-@keyframes separacion10 {
-    0% {
-        transform: translateY(-500px);
-    }
-    20%{
-        transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    
-    }
-    100% {
-        transform: translateY(-100px);
-        transform: scale(0);
-    }
-  }
-
-  #c11 {
-    font-size: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(#33ccff, #ff0066);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 2s;
-    animation: separacion11 5s ease-in-out ;
-}
-
-@keyframes separacion11 {
-    0% {
-        transform: translateY(-500px);
-    }
-    20%{
-        transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    
-    }
-    100% {
-        transform: translateY(-100px);
-        transform: scale(0);
-    }
-  }
+/* Apply the animation to each circle */
+#c1 { animation-name: separacion; animation: separacion 5s ease-in-out ; }
+#c2 { animation-name: separacion; animation: separacion2 5s ease-in-out ; }
+#c3 { animation-name: separacion; animation: separacion3 5s ease-in-out ; }
+#c4 { animation-name: separacion; animation: separacion4 5s ease-in-out ; }
+#c5 { animation-name: separacion; animation: separacion5 5s ease-in-out ; }
+#c6 { animation-name: separacion; animation: separacion6 5s ease-in-out ; }
+#c7 { animation-name: separacion; animation: separacion7 5s ease-in-out ; }
+#c8 { animation-name: separacion; animation: separacion8 5s ease-in-out ; }
+#c9 { animation-name: separacion; animation: separacion9 5s ease-in-out ; }
+#c10 { animation-name: separacion; animation: separacion10 5s ease-in-out ; }
+#c11 { animation-name: separacion; animation: separacion11 5s ease-in-out ; }

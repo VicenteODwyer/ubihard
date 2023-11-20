@@ -44,6 +44,8 @@ function applyColorBlindness() {
             data[i + 1] = transformed[1];
             data[i + 2] = transformed[2];
         }
-
+    
         ctx.putImageData(imageData, 0, 0);
-        img.src = canvas.
+    }   
+}
+        //img.src = canvas.
