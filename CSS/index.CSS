@@ -1,21 +1,29 @@
+
+
+
+/* Importing the Raleway font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
+/* Resetting default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Centering the title */
 #titulo{
-display: flex;
-margin-top: 5%;
-justify-content: center;
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
 }
 
-body {   
+/* Setting the background gradient */
+body { 
     background: linear-gradient(darkblue,purple, violet);
 }
 
+/* Centering the buttons vertically and horizontally */
 .buttom{
     display: flex;
     justify-content: center;
@@ -25,6 +33,7 @@ body {
     font-weight: bold;
 }
 
+/* Styling the buttons */
 a {
     position: relative;
     display: inline-block;
@@ -39,6 +48,7 @@ a {
     margin-right: 15px;
 }
 
+/* Changing the button color and adding a box-shadow on hover */
 a:hover {
     background: whitesmoke;
     color: #050801;
@@ -49,17 +59,21 @@ a:hover {
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
+/* Changing the color of the buttons based on their position */
 a:nth-child(1) {
     filter: hue-rotate(270deg);
 }
 a:nth-child(2) {
     filter: hue-rotate(110deg);
 }
+
+/* Adding the underline effect to the buttons */
 a span {
     position: absolute;
     display: block;
 }
 
+/* Animating the underline effect */
 a span:nth-child(1) {
     top: 0;
     left: 0;
@@ -74,9 +88,12 @@ a span:nth-child(1) {
         left: -100%;
     }
 
-    50%,
-    100% {
+    50% {
         left: 100%;
+    }
+
+    100% {
+        left: -100%;
     }
 }
 
@@ -96,9 +113,12 @@ a span:nth-child(2) {
         top: -100%;
     }
 
-    50%,
-    100% {
+    50% {
         top: 100%;
+    }
+
+    100% {
+        top: -100%;
     }
 }
 
@@ -117,12 +137,14 @@ a span:nth-child(3) {
         right: -100%;
     }
 
-    50%,
-    100% {
+    50% {
         right: 100%;
     }
-}
 
+    100% {
+        right: -100%;
+    }
+}
 
 a span:nth-child(4) {
     bottom: -100%;
@@ -139,36 +161,41 @@ a span:nth-child(4) {
         bottom: -100%;
     }
 
-    50%,
-    100% {
+    50% {
         bottom: 100%;
+    }
+
+    100% {
+        bottom: -100%;
     }
 }
 
-  .level-selector {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+/* Styling the level selector */
+.level-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-        .level-button {
-            background-color: white;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
+/* Styling the level buttons */
+.level-button {
+    background-color: white;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+}
 
-        .level-button:hover {
-            background-color: white;
-        }
+/* Changing the background color of the level buttons on hover */
+.level-button:hover {
+    background-color: white;
+}
 
-    

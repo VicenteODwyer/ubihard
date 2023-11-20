@@ -1,5 +1,8 @@
+
+/* Import the Orbitron font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap');
 
+/* Set the body's background color to black and remove default margins */
 body{
     background-color: black;
     margin-top: 0px;
@@ -7,6 +10,7 @@ body{
     width: 100%;
 }
 
+/* Create a container for the matrix effect */
 #matrix{
     width: 100%;
     background-color: black;
@@ -15,6 +19,7 @@ body{
     font-family: 'Orbitron', sans-serif;
 }
 
+/* Style the individual characters in the matrix */
 #matrix div {
     width: 18px;
     height: 100%;
@@ -26,6 +31,7 @@ body{
     transition-duration: 0.2s;
 }
 
+/* Style the paragraph that appears at the bottom of the screen */
 .p{
     font-size: 75px;
     font-family: 'Orbitron', sans-serif;
@@ -42,8 +48,9 @@ body{
     flex-direction: column;
     justify-content: space-around;
     height: 500px;
-    
 }
+
+/* Define the animation for the paragraph moving up and down */
 @keyframes moverArriba {
     0%{
         transform: translateY(100%);
