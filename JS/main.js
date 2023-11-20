@@ -9,12 +9,8 @@ let rederer = Matter.Render.create({
         wireframes:false,
         background: './imagenes/Sprites/bg.png'
     },
-    physics:{
-        frictionAir:1,
-        inertia: 1,
-    }
 });
-
+collCube=0
 let ground = Matter.Bodies.rectangle(740, 600, 1480 , 195, {
     isStatic: true,
     fillStyle: 'brawn'
@@ -130,6 +126,8 @@ $i=Math.floor(Math.random()*4)+1;
                 inertia: Infinity
             })
         }
+
+
 let sling = Matter.Constraint.create({
     pointA: {
         x: ball_pos.x,
@@ -198,9 +196,9 @@ Matter.Events.on(engine, 'afterUpdate', function(event){
                     }
                     
                 },
-                density: 0.001, // densidad del círculo
+                density: 0.01, // densidad del círculo
                 friction: 0.01, // fricción del círculo
-                frictionAir: 0.01, // fricción del aire del círculo
+                frictionAir: 0.02   , // fricción del aire del círculo
                 restitution: 0.8, // restitución del círculo (rebote)
                 inertia: Infinity
             })
@@ -214,7 +212,7 @@ Matter.Events.on(engine, 'afterUpdate', function(event){
                     
                 },
                 density: 0.001, // densidad del círculo
-                friction: 0.01, // fricción del círculo
+                friction: 0.01, // fricción del círculo 
                 frictionAir: 0.01, // fricción del aire del círculo
                 restitution: 0.8, // restitución del círculo (rebote)
                 inertia: Infinity
@@ -223,6 +221,7 @@ Matter.Events.on(engine, 'afterUpdate', function(event){
         sling.bodyB = ball
         Matter.World.add(engine.world, ball)
         isFired = false
+
     }
 })
 
