@@ -66,14 +66,15 @@ let ball_pos = {
 
 $i=Math.floor(Math.random()*4)+1;
         if ($i==1) {
+        //crando pajaro amarillo
         ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 20,{
             render: {
-                sprite:{
+                sprite:{//imagen
                     
                     texture: './Imagenes/Sprites/PajaroAmarillo.png'
                 }
                 
-            },
+            },//fisicas
             density: 0.001, // densidad del círculo
             friction: 0.01, // fricción del círculo
             frictionAir: 0.01, // fricción del aire del círculo
@@ -81,14 +82,15 @@ $i=Math.floor(Math.random()*4)+1;
             inertia: Infinity
         })
         } else if ($i==2){
+            //creando pajaro azul
             ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 20,{
                 render: {
-                    sprite:{
+                    sprite:{//imagen
                         
                         texture: './Imagenes/Sprites/PajaroAzul.png'
                     }
                     
-                },
+                },//fiscas
                 density: 0.001, // densidad del círculo
                 friction: 0.01, // fricción del círculo
                 frictionAir: 0.01, // fricción del aire del círculo
@@ -96,14 +98,15 @@ $i=Math.floor(Math.random()*4)+1;
                 inertia: Infinity
             })
         } else if ($i==3){
+            //creando pajaro gordo
             ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 20,{
                 render: {
-                    sprite:{
+                    sprite:{//imagen
                         
                         texture: './Imagenes/Sprites/Pajarogordo.png'
                     }
                     
-                },
+                },//fiscas
                 density: 0.001, // densidad del círculo
                 friction: 0.01, // fricción del círculo
                 frictionAir: 0.01, // fricción del aire del círculo
@@ -111,14 +114,15 @@ $i=Math.floor(Math.random()*4)+1;
                 inertia: Infinity
             })
         } else if ($i==4){
+            //creando pajaro rojo
             ball = Matter.Bodies.circle(ball_pos.x, ball_pos.y, 20,{
                 render: {
-                    sprite:{
+                    sprite:{//imagen
                         
                         texture: './Imagenes/Sprites/PajaroRojo.png'
                     }
                     
-                },
+                },//fiscas
                 density: 0.001, // densidad del círculo
                 friction: 0.01, // fricción del círculo
                 frictionAir: 0.01, // fricción del aire del círculo
