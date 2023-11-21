@@ -1,0 +1,68 @@
+* {
+    font-family: 'Chakra Petch', sans-serif;/*fuente*/
+  }
+  
+  /* Estilo para el fondo de la página */
+  #body {
+    background-image: url('/ubihard/Imagenes/Sprites/bg.png'); /*fondo de imagen del tablero*/
+    height: 695px; /* Altura de la imagen de fondo */
+    width: 1480px; /* Ancho de la imagen de fondo */
+  }
+  
+  /* Estilo para todos los elementos div */
+  div {
+    /* Establece el fondo del div */
+    background: transparent;/*fondo transparente*/
+    font-family: inherit; /* Hereda la fuente predeterminada */
+    background: #FBCA1F; /* Color de fondo del div */
+    font-family: Raleway; /* Fuente del texto dentro del div */
+    padding: 0.6em 1.3em; /* Espaciado interno del div */
+    font-weight: bold; /* Establece la negrita del texto */
+    font-size: 18px; /* Tamaño del texto */
+    border-radius: 0.4em; /* Bordes redondeados del div */
+  
+    /* Estilos de diseño flex para el div */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* Estilo específico para el div con clase "div1" */
+  .div1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Estilos para los botones en estado hover y active */
+  button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+  
+  /* Estilos para la sección con ID "Imagenes_dalto" */
+  #Imagenes_dalto {
+    flex-grow: 1; /* Hace que la sección crezca para ocupar el espacio disponible */
+  }
+  
+  /* Estilos para el botón con ID "boton" */
+  #boton {
+    font-size: medium;
+    background-color: transparent;
+    color: black;
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: 1px solid #0b0a0a; /* Borde del botón */
+    border-radius: 20px; /* Bordes redondeados del botón */
+    margin: 5px; /* Margen del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
+  
+  /* Estilos adicionales para el botón en estado hover */
+  .boton:hover {
+    background-color: rgb(164, 137, 137);
+  }
