@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes</title>
+    <link rel="stylesheet" href="/ubihard/CSS/accecibilidad.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8710fde3bd.js" crossorigin="anonymous"></script>
+    <script src="/ubihard/JS/matter.js"></script>
+
+</head>
+<body>
+    <article>
+        <section>
+            <div><img src="/ubihard/Imagenes/logo 2 ultra chicoangry birds.webp" alt=""></div><!-- establece una imagen de titulo -->
+
+            <div id="caja_sonido" class="Sonido">
+                <h1>Sonido</h1>
+                
+                <label for="efect_sonido" class="vol_1">Efectos de Sonido</label><br><!-- Es el sonido -->
+                <div class="sonido">
+                    <a href="" class="botn b3"><i class="fa-solid fa-volume-high"></i></a><!-- Es el icono del sonido -->
+                    <input type="range"><br>
+                </div>
+
+                <div class="colorselect">
+                    <button onclick="cambiarImagenes()" class="boton img-dalt2" id="boton1"><!-- primer boton -->
+                        sin daltonismo
+                    </button>
+                    <button onclick="tetranope ()" class="boton" id="boton2"><!-- segundo boton -->
+                        tetranopia
+                    </button>   
+                    <button onclick="protanope ()"  class="boton" id="boton3"><!-- tercer boton -->
+                        protanope
+                    </button>   
+                     <button onclick="datonimo4" class="boton" id="boton4">
+                        Daltonismo 4
+                    </button><!-- cuarto boton -->
+                </div>
+            </div>
+
+     
+        </section>
+    </article>
+    <aside>
+        <div id="Imagenes_dalto" class="imagenes"><!-- imagenes del angry bird -->
+            <img src="/ubihard/Imagenes/Niveles/nivel1.png" alt="prueba1" id="imagen1" class="tablero1">
+            <img src="Imagenes/Niveles/nivel5.png" alt="prueba2" id="imagen2" class="tablero2">
+            <img src="Imagenes/Niveles/nivel2.png" alt="prueba3" id="imagen3" class="tablero3">
+            <img src="Imagenes/Niveles/nivel3.png" alt="prueba4" id="imagen4" class="tablero4">
+            <img src="Imagenes/Niveles/nivel4.png" alt="prueba5" id="imagen5" class="tablero5">
+        </div>
+    </aside>
+
+    <script>
+
+        let cambioActivo = false;
+
+        function cambiarImagenes() {
+            // Obtiene las imágenes que deben cambiar
+            const imagen1 = document.getElementById('imagen1');
+            const imagen2 = document.getElementById('imagen2');
+            const imagen3 = document.getElementById('imagen3');
+            const imagen4 = document.getElementById('imagen4');
+            const imagen5 = document.getElementById('imagen5');
+
+            // Obtiene las rutas de las nuevas imágenes
+            const nuevaRuta1 =  '/ubihard/Imagenes/Sprites/pajaroRojo.png';
+            const nuevaRuta2 = '/ubihard/Imagenes/Sprites/chancho.png' ;
+            const nuevaRuta3 = '/ubihard/Imagenes/Sprites/PajaroAmarillo.png' ;
+            const nuevaRuta4 = '/ubihard/Imagenes/Sprites/Pajarogordo.png' ;
+            const nuevaRuta5 = '/ubihard/Imagenes/Sprites/PajaroAzul.png' ;
+
+            // Cambia las fuentes de las imágenes
+            imagen1.src = nuevaRuta1;
+            imagen2.src = nuevaRuta2;
+            imagen3.src = nuevaRuta3;
+            imagen4.src = nuevaRuta4;
+            imagen5.src = nuevaRuta5;
+
+            // Actualiza el estado del botón
+            cambioActivo = !cambioActivo;
+
+            // Si ya se realizó un cambio, vuelve a la imagen inicial en el próximo clic
+            if (!cambioActivo) {
+                imagen1.src = '/ubihard/Imagenes/Niveles/nivel1.png';
+                imagen2.src = '/ubihard/Imagenes/Niveles/nivel5.png';
+                imagen3.src = '/ubihard/Imagenes/Niveles/nivel2.png';
+                imagen4.src = '/ubihard/Imagenes/Niveles/nivel3.png';
+                imagen5.src = '/ubihard/Imagenes/Niveles/nivel4.png';
+            }
+
+           // document.body.style.backgroundColor = "#e6e6e6";  // Cambia el color 
+           // localStorage.setItem("fondoColor", "#e6e6e6");
+
+           resetearFondos();
+        document.getElementById('boton1').style.background = "transparent";
+        }
+         // segundo boton
+        function tetranope() {
+             // Obtiene las imágenes que deben cambiar
+            const imagen1 = document.getElementById('imagen1');
+            const imagen2 = document.getElementById('imagen2');
+            const imagen3 = document.getElementById('imagen3');
+            const imagen4 = document.getElementById('imagen4');
+            const imagen5 = document.getElementById('imagen5');
+
+            // Obtiene las rutas de las nuevas imágenes
+            const nuevaRuta1 =  '/ubihard/Imagenes/Sprites/';
+            const nuevaRuta2 = '/ubihard/Imagenes/Sprites/chancho.png' ;
+            const nuevaRuta3 = '/ubihard/Imagenes/Sprites/PajaroAmarillo.png' ;
+            const nuevaRuta4 = '/ubihard/Imagenes/Sprites/Pajarogordo.png' ;
+            const nuevaRuta5 = '/ubihard/Imagenes/Sprites/PajaroAzul.png' ;
+
+            // Cambia las fuentes de las imágenes
+            imagen1.src = nuevaRuta1;
+            imagen2.src = nuevaRuta2;
+            imagen3.src = nuevaRuta3;
+            imagen4.src = nuevaRuta4;
+            imagen5.src = nuevaRuta5;
+
+            // Actualiza el estado del botón
+            cambioActivo = !cambioActivo;
+
+            // Si ya se realizó un cambio, vuelve a la imagen inicial en el próximo clic
+            if (!cambioActivo) {
+                imagen1.src = '/ubihard/Imagenes/Niveles/nivel1.png';
+                imagen2.src = '/ubihard/Imagenes/Niveles/nivel5.png';
+                imagen3.src = '/ubihard/Imagenes/Niveles/nivel2.png';
+                imagen4.src = '/ubihard/Imagenes/Niveles/nivel3.png';
+                imagen5.src = '/ubihard/Imagenes/Niveles/nivel4.png';
+            }
+            // Cambiar el fondo del botón actual
+        document.getElementById('boton4').style.background = color; // Reemplaza con la ruta de tu nueva imagen
+        
+        }
+        // boton 3
+        function protanope() {
+             // Obtiene las imágenes que deben cambiar
+            const imagen1 = document.getElementById('imagen1');
+            const imagen2 = document.getElementById('imagen2');
+            const imagen3 = document.getElementById('imagen3');
+            const imagen4 = document.getElementById('imagen4');
+            const imagen5 = document.getElementById('imagen5');
+
+            // Obtiene las rutas de las nuevas imágenes
+            const nuevaRuta1 =  '/ubihard/Imagenes/Sprites/pajaroRojo.png';
+            const nuevaRuta2 = '/ubihard/Imagenes/Sprites/chancho.png' ;
+            const nuevaRuta3 = '/ubihard/Imagenes/Sprites/PajaroAmarillo.png' ;
+            const nuevaRuta4 = '/ubihard/Imagenes/Sprites/Pajarogordo.png' ;
+            const nuevaRuta5 = '/ubihard/Imagenes/Sprites/PajaroAzul.png' ;
+
+            // Cambia las fuentes de las imágenes
+            imagen1.src = nuevaRuta1;
+            imagen2.src = nuevaRuta2;
+            imagen3.src = nuevaRuta3;
+            imagen4.src = nuevaRuta4;
+            imagen5.src = nuevaRuta5;
+
+            // Actualiza el estado del botón
+            cambioActivo = !cambioActivo;
+
+            // Si ya se realizó un cambio, vuelve a la imagen inicial en el próximo clic
+            if (!cambioActivo) {
+                imagen1.src = '/ubihard/Imagenes/Niveles/nivel1.png';
+                imagen2.src = '/ubihard/Imagenes/Niveles/nivel5.png';
+                imagen3.src = '/ubihard/Imagenes/Niveles/nivel2.png';
+                imagen4.src = '/ubihard/Imagenes/Niveles/nivel3.png';
+                imagen5.src = '/ubihard/Imagenes/Niveles/nivel4.png';
+            }
+            // Cambiar el fondo del botón actual
+        document.getElementById('boton4').style.background = color; // Reemplaza con la ruta de tu nueva imagen
+        
+        }
+        // boton 4
+        function datonimo4() {
+             // Obtiene las imágenes que deben cambiar
+            const imagen1 = document.getElementById('imagen1');
+            const imagen2 = document.getElementById('imagen2');
+            const imagen3 = document.getElementById('imagen3');
+            const imagen4 = document.getElementById('imagen4');
+            const imagen5 = document.getElementById('imagen5');
+
+            // Obtiene las rutas de las nuevas imágenes
+            const nuevaRuta1 =  '/ubihard/Imagenes/Sprites/pajaroRojo.png';
+            const nuevaRuta2 = '/ubihard/Imagenes/Sprites/chancho.png' ;
+            const nuevaRuta3 = '/ubihard/Imagenes/Sprites/PajaroAmarillo.png' ;
+            const nuevaRuta4 = '/ubihard/Imagenes/Sprites/Pajarogordo.png' ;
+            const nuevaRuta5 = '/ubihard/Imagenes/Sprites/PajaroAzul.png' ;
+
+            // Cambia las fuentes de las imágenes
+            imagen1.src = nuevaRuta1;
+            imagen2.src = nuevaRuta2;
+            imagen3.src = nuevaRuta3;
+            imagen4.src = nuevaRuta4;
+            imagen5.src = nuevaRuta5;
+
+            // Actualiza el estado del botón
+            cambioActivo = !cambioActivo;
+
+            // Si ya se realizó un cambio, vuelve a la imagen inicial en el próximo clic
+            if (!cambioActivo) {
+                imagen1.src = '/ubihard/Imagenes/Niveles/nivel1.png';
+                imagen2.src = '/ubihard/Imagenes/Niveles/nivel5.png';
+                imagen3.src = '/ubihard/Imagenes/Niveles/nivel2.png';
+                imagen4.src = '/ubihard/Imagenes/Niveles/nivel3.png';
+                imagen5.src = '/ubihard/Imagenes/Niveles/nivel4.png';
+            }
+            // Cambiar el fondo del botón actual
+        document.getElementById('boton4').style.background = color; // Reemplaza con la ruta de tu nueva imagen
+        
+        }
+    </script>
+</body>
+</html>
